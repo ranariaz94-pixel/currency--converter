@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+   <div id="main">
+    <h1>currency converter </h1>
+    <div id="body">   <label for="wantedTransfer">transfer price:</label>
+    <div><select id="wantedTransfer"> 
+        <option value="PKR">PKR</option>
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+    
+<input type="number" placeholder="give a value" id="thevaltobeconverted">
+</div >  
+
+<div>
+<label for="transferrer">transfer to:</label>
+
+<select id="transferrer">
+        <option value="PKR">PKR</option>
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+</select>
+</div>
+</div>
+<button id="convert">convert</button>
+</div>
+<div id="result"></div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>

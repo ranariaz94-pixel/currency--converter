@@ -1,0 +1,38 @@
+*{
+    text-align:center;
+    padding: 0%;
+    margin:0%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background-color: #669bbc;
+}
+
+div{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:20px;
+}
+
+select{
+    margin: 10px;
+}
+
+input{
+    margin: 10px;
+}
+
+#convert{
+    cursor:pointer;
+    background-color:rgba(100,255,255);
+    /* border-radius:5px; */
+      padding-left: 20px;
+ padding-right: 20px;
+}
