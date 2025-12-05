@@ -37,6 +37,7 @@ input{
  padding-right: 20px;
 }
 select{
-    padding:40px;
-    background-color: #669bbc;
+    border-radius: 4px;
+    padding:4px;
+    background-color: #021a2a;
 }
