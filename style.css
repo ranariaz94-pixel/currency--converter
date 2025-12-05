@@ -36,3 +36,7 @@ input{
       padding-left: 20px;
  padding-right: 20px;
 }
+select{
+    padding:40px;
+    background-color: #669bbc;
+}
