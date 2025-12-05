@@ -1,28 +1,30 @@
-  let wantedTransfer = document.querySelector("#wantedTransfer").value
- const btn = document.querySelector("#convert");
- const result = document.querySelector("#result");
-let transferrer = document.querySelector("#transferrer");
+const btn = document.querySelector("#convert");
+const result = document.querySelector("#result");
 
-let input = document.querySelector("#thevaltobeconverted").value;
+btn.addEventListener("click", async () => {
+    const wantedTransfer = document.querySelector("#wantedTransfer").value;
+    const transferrer = document.querySelector("#transferrer").value;
+    const input = parseFloat(document.querySelector("#thevaltobeconverted").value);
 
+    if (isNaN(input)) {
+        result.innerText = "Please enter a valid number!";
+        return;
+    }
 
-async function currencyCoversion(){
-  try {
-    result.innerText = "loading"
-      let response = await fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json');
-    let data = await response.json();
-      const amountInEUR = input / data.eur[wantedTransfer.toLowerCase()];
-  const converted = amountInEUR * data.eur[transferrer.toLowerCase()];
+    result.innerText = "Loading... ⏳";
 
-  result.textContent = converted.toFixed(2)
-  } catch (error) {
-    if(result.innerText === Number(result.innertext)){
-  result.innerText = "Invalid value!"
-  return;  
-  }
-  result.innerText = "an error ocurred"
-}}
-btn.addEventListener("click",() => {
-      
-currencyCoversion();
-})
+    try {
+        const response = await fetch(
+            'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json'
+        );
+        const data = await response.json();
+
+        const amountInEUR = input / data.eur[wantedTransfer.toLowerCase()];
+        const converted = amountInEUR * data.eur[transferrer.toLowerCase()];
+
+        result.innerText = converted.toFixed(2) + " " + transferrer;
+    } catch (error) {
+        console.error(error);
+        result.innerText = "An error occurred!";
+    }
+});
