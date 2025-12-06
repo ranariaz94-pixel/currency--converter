@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="52C5Jp2sTcY9_OySIRMQiDxLLbQQV9FplqItNpAf0dM" />
+
+    <!-- ✅ BASIC SEO -->
+    <meta charset="UTF-8">
+   <title>PKR to INR Converter | Live Pakistani Rupee to INR Rate</title>
+    
+<meta name="description" content="Convert Pakistani Rupee to Indian Rupee with live exchange rates. Free fast PKR to USD converter developed by Farhan.">
+    <meta name="keywords" content="currency converter, PKR to USD, USD to PKR, Pakistan currency converter, live exchange rates">
+    <meta name="author" content="Farhan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ SOCIAL SHARING (OPEN GRAPH) -->
+    <meta property="og:title" content="Currency Converter Pakistan">
+    <meta property="og:description" content="Convert PKR to USD, EUR, INR with real-time exchange rates. Free fast tool.">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ PERFORMANCE -->
+    <link rel="preload" as="style" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+<header>
+    <!-- ✅ ONLY ONE H1 -->
+    <h1>PKR to INR converter</h1>
+</header>
+
+<main>
+
+<section id="main">
+    <h2>Convert Currency Instantly</h2>
+
+    <div id="body">
+
+        <label for="wantedTransfer">Transfer from:</label>
+
+        <div>
+            <select id="wantedTransfer">
+                <option value="PKR">PKR</option>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+
+            <input 
+                type="number" 
+                placeholder="Enter amount" 
+                id="thevaltobeconverted"
+                aria-label="Enter amount to convert"
+            >
+        </div>
+
+        <div>
+            <label for="transferrer">Transfer to:</label>
+
+            <select id="transferrer">
+                <option value="PKR">PKR</option>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+    </div>
+
+    <button id="convert" aria-label="Convert Currency Button">Convert</button>
+
+    <div id="result" aria-live="polite"></div>
+
+</section>
+
+</main>
+
+<footer>
+    <p><strong>Developed by Farhan</strong></p>
+</footer>
+
+<!-- ✅ DEFER FOR BETTER PERFORMANCE -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
