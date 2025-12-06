@@ -1,46 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css"/>
+
+    <!-- ✅ BASIC SEO -->
     <meta charset="UTF-8">
+    <title>Currency Converter Pakistan | PKR to USD, EUR, INR Live Rates</title>
+    <meta name="description" content="Free online currency converter for Pakistan. Convert PKR to USD, EUR, INR with live exchange rates instantly. Developed by Farhan.">
+    <meta name="keywords" content="currency converter, PKR to USD, USD to PKR, Pakistan currency converter, live exchange rates">
+    <meta name="author" content="Farhan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Converter</title>
+
+    <!-- ✅ SOCIAL SHARING (OPEN GRAPH) -->
+    <meta property="og:title" content="Currency Converter Pakistan">
+    <meta property="og:description" content="Convert PKR to USD, EUR, INR with real-time exchange rates. Free fast tool.">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ PERFORMANCE -->
+    <link rel="preload" as="style" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
+
 </head>
 <body>
-   <header> <h1>Converter</h1> </header>
-   <main>
-   <div id="main">
-    <h1>currency converter </h1>
-    <div id="body">   <label for="wantedTransfer">transfer price:</label>
-    <div><select id="wantedTransfer"> 
-        <option value="PKR">PKR</option>
-        <option value="INR">INR</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-    </select>
-    
-<input type="number" placeholder="give a value" id="thevaltobeconverted">
-</div >  
 
-<div>
-<label for="transferrer">transfer to:</label>
+<header>
+    <!-- ✅ ONLY ONE H1 -->
+    <h1>Currency Converter Pakistan</h1>
+</header>
 
-<select id="transferrer">
-        <option value="PKR">PKR</option>
-        <option value="INR">INR</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-</select>
-</div>
-</div>
-<button id="convert">convert</button>
-</div>
-<div id="result"></div>
+<main>
+
+<section id="main">
+    <h2>Convert Currency Instantly</h2>
+
+    <div id="body">
+
+        <label for="wantedTransfer">Transfer from:</label>
+
+        <div>
+            <select id="wantedTransfer">
+                <option value="PKR">PKR</option>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+
+            <input 
+                type="number" 
+                placeholder="Enter amount" 
+                id="thevaltobeconverted"
+                aria-label="Enter amount to convert"
+            >
+        </div>
+
+        <div>
+            <label for="transferrer">Transfer to:</label>
+
+            <select id="transferrer">
+                <option value="PKR">PKR</option>
+                <option value="INR">INR</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+    </div>
+
+    <button id="convert" aria-label="Convert Currency Button">Convert</button>
+
+    <div id="result" aria-live="polite"></div>
+
+</section>
+
 </main>
 
 <footer>
-    <strong><p>developed by Farhan</p></strong>
+    <p><strong>Developed by Farhan</strong></p>
 </footer>
-    <script src="script.js"></script>
+
+<!-- ✅ DEFER FOR BETTER PERFORMANCE -->
+<script src="script.js" defer></script>
+
 </body>
 </html>

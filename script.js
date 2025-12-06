@@ -22,7 +22,7 @@ btn.addEventListener("click", async () => {
         const amountInEUR = input / data.eur[wantedTransfer.toLowerCase()];
         const converted = amountInEUR * data.eur[transferrer.toLowerCase()];
 
-        result.innerText = converted.toFixed(2) + " " + transferrer;
+        result.innerText = converted.toFixed(4) + " " + transferrer;
     } catch (error) {
         console.error(error);
         result.innerText = "An error occurred!";
