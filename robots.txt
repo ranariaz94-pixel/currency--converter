@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ranariaz94-pixel.github.io/currency--converter/sitemap.xml
