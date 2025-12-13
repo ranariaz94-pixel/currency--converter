@@ -22,14 +22,18 @@
     <!-- ✅ PERFORMANCE -->
     <link rel="preload" as="style" href="style.css">
     <link rel="stylesheet" href="style.css"/>
-      <script>
-    // Check if the current URL contains "github.io"
-    if (window.location.href.includes("github.io")) {
-      // Redirect to your preferred URL
-      window.location.href = "https://currency-converter-ebon-gamma.vercel.app/";
+    <script>
+  (function () {
+    const host = window.location.hostname;
+
+    if (host.endsWith("github.io")) {
+      window.location.replace(
+        "https://currency-converter-ebon-gamma.vercel.app/"
+      );
     }
+  })();
   </script>
-<meta http-equiv="refresh" content="0; url=https://currency-converter-ebon-gamma.vercel.app/">
+
 
 </head>
 <body>
@@ -65,7 +69,7 @@
         </div>
 
         <div>
-            <label for="transferrer">Transfer to:</label>
+<meta http-equiv="refresh" content="0; url=https://currency-converter-ebon-gamma.vercel.app/">            <label for="transferrer">Transfer to:</label>
 
             <select id="transferrer">
                 <option value="PKR">PKR</option>
